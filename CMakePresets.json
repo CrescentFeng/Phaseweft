@@ -1,0 +1,75 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 22,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base-release",
+      "hidden": true,
+      "binaryDir": "${sourceDir}/build/presets/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "core-release",
+      "displayName": "Core DSP tests (Release)",
+      "inherits": "base-release",
+      "cacheVariables": {
+        "MOTION_FIELD_BUILD_PLUGIN": "OFF"
+      }
+    },
+    {
+      "name": "macos-universal-release",
+      "displayName": "macOS universal plug-ins (Release)",
+      "inherits": "base-release",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      },
+      "cacheVariables": {
+        "MOTION_FIELD_BUILD_PLUGIN": "ON",
+        "CMAKE_OSX_ARCHITECTURES": "arm64;x86_64"
+      }
+    },
+    {
+      "name": "windows-release",
+      "displayName": "Windows plug-ins (Release)",
+      "inherits": "base-release",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
+      "cacheVariables": {
+        "MOTION_FIELD_BUILD_PLUGIN": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "core-release", "configurePreset": "core-release" },
+    { "name": "macos-universal-release", "configurePreset": "macos-universal-release" },
+    { "name": "windows-release", "configurePreset": "windows-release" }
+  ],
+  "testPresets": [
+    {
+      "name": "core-release",
+      "configurePreset": "core-release",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "macos-universal-release",
+      "configurePreset": "macos-universal-release",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "windows-release",
+      "configurePreset": "windows-release",
+      "output": { "outputOnFailure": true }
+    }
+  ]
+}

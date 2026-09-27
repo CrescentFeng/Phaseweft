@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <rect width="1200" height="620" rx="28" fill="#0c1218"/>
+  <style>
+    .box{fill:#172730;stroke:#72ead2;stroke-width:2}.unique{fill:#243129;stroke:#ffc765;stroke-width:3}
+    .t{fill:#e7f1ef;font:600 20px sans-serif}.s{fill:#a9bdc1;font:15px sans-serif}
+    .line{stroke:#58727b;stroke-width:3;fill:none;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#72ead2"/></marker></defs>
+  <text x="50" y="58" class="t" font-size="30">PHASEWEFT · SIGNAL ARCHITECTURE</text>
+  <rect x="50" y="265" width="130" height="70" rx="12" class="box"/><text x="93" y="307" class="t">INPUT</text>
+  <path d="M180 300H240" class="line"/>
+  <rect x="240" y="90" width="210" height="70" rx="12" class="box"/><text x="280" y="120" class="t">4 ms DRY REF</text><text x="279" y="144" class="s">host latency alignment</text>
+  <rect x="240" y="190" width="210" height="70" rx="12" class="box"/><text x="292" y="232" class="t">CLASSIC / TZ</text>
+  <rect x="240" y="290" width="210" height="90" rx="12" class="unique"/><text x="272" y="325" class="t">TRANSIENT SPLIT</text><text x="275" y="352" class="s">attack + sustain voices</text>
+  <rect x="240" y="410" width="210" height="100" rx="12" class="unique"/><text x="282" y="445" class="t">FIELD MATRIX</text><text x="274" y="472" class="s">3 bands + content analysis</text><text x="285" y="495" class="s">adaptive trajectories</text>
+  <path d="M215 300V125H240M215 225H240M215 335H240M215 460H240" class="line"/>
+  <rect x="550" y="215" width="235" height="170" rx="16" class="box"/><text x="593" y="258" class="t">WARM ENGINE BANK</text><text x="588" y="290" class="s">all seven stereo voices run</text><text x="593" y="315" class="s">continuously; 40 ms engine</text><text x="615" y="340" class="s">crossfade prevents gaps</text>
+  <path d="M450 125H505V250H550M450 225H550M450 335H550M450 460H505V350H550" class="line"/>
+  <rect x="875" y="265" width="130" height="70" rx="12" class="box"/><text x="918" y="307" class="t">MIX</text>
+  <path d="M785 300H875M1005 300H1090" class="line"/>
+  <text x="1090" y="307" class="t">OUT</text>
+  <text x="50" y="580" class="s">Gold blocks are the project-specific engines; Classic and Through-Zero provide reference and expected capability.</text>
+</svg>

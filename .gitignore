@@ -1,0 +1,58 @@
+# macOS and editor metadata
+.DS_Store
+._*
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# CMake and local build trees
+build/
+build-*/
+cmake-build-*/
+out/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+compile_commands.json
+
+# Local dependency checkout
+third_party/JUCE/
+
+# Generated plug-in/application bundles
+*.app/
+*.component/
+*.vst3/
+*.aaxplugin/
+artifacts/plugins/
+artifacts/plugins-*/
+
+# Local packages and checksums
+release/*.zip
+release/*.sha256
+
+# DAW caches and backups
+release/host-tests/Backups/
+release/host-tests/Media/
+*.rpp-bak
+*.reapeaks
+
+# Credentials and signing material
+.env
+.env.*
+*.cer
+*.p12
+*.pem
+*.key
+*.provisionprofile
+*.mobileprovision
+
+# Windows/MSVC local output
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb

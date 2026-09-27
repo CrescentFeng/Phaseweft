@@ -1,0 +1,14 @@
+*.wav binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary
+*.pdf binary
+
+*.sh text eol=lf
+*.ps1 text eol=crlf
+*.cpp text eol=lf
+*.h text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
