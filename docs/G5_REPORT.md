@@ -22,6 +22,14 @@ A fresh local clone of the pushed G4 commit configured through the documented de
 
 The G3 host evidence remains applicable because the production DSP, processor, editor and state code are unchanged. The final feature-freeze audit records that fact instead of claiming an unrun new host matrix for documentation-only changes.
 
+## Source archive audit
+
+The release-candidate Git archive contains 74 tracked files under one `Phaseweft-0.7.0` directory. It contains no Git metadata, build tree, cache, log, certificate, key, environment file, nested archive or absolute local path. The checksum file contains only the archive basename.
+
+The archive was extracted into a separate temporary directory, configured against the same verified JUCE 9.0.2 source, built as Standalone/VST3/AU and passed CTest 4/4. Bundle metadata reported version `0.7.0` and identifier `audio.crescent.phaseweft`.
+
+Raw CMake bundles are local build products rather than release attachments. Strict signature checks can fail after generators add bundle resources. The macOS release-build script now performs and verifies an explicit local ad-hoc re-sign; this does not claim Developer ID signing or notarization.
+
 ## Publication gates
 
 Before creating `v0.7.0`, the final tracked tree and exact source archive must be scanned, the archive must be independently rebuilt, and its SHA-256 must be recorded. The tag and private GitHub Release will not be created until those checks pass.

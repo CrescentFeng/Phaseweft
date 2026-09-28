@@ -16,4 +16,18 @@ cmake "${cmake_args[@]}"
 cmake --build "${build_dir}" --config Release --parallel
 ctest --test-dir "${build_dir}" --output-on-failure
 
+if [[ "${MOTION_FIELD_ADHOC_SIGN:-1}" == "1" ]]; then
+  bundles=(
+    "${build_dir}/Source/Plugin/MotionField_artefacts/Release/Standalone/Phaseweft.app"
+    "${build_dir}/Source/Plugin/MotionField_artefacts/Release/VST3/Phaseweft.vst3"
+    "${build_dir}/Source/Plugin/MotionField_artefacts/Release/AU/Phaseweft.component"
+  )
+  for bundle in "${bundles[@]}"; do
+    if [[ -d "${bundle}" ]]; then
+      /usr/bin/codesign --force --deep --sign - --options runtime "${bundle}"
+      /usr/bin/codesign --verify --deep --strict "${bundle}"
+    fi
+  done
+fi
+
 print "Release build complete: ${build_dir}"

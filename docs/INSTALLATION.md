@@ -18,6 +18,8 @@ The default configure step downloads the pinned JUCE 9.0.2 source archive and ve
 
 Build locations vary by generator. Search below `build/release/Source/Plugin/MotionField_artefacts` for `Phaseweft.app`, `Phaseweft.vst3` and, on macOS, `Phaseweft.component`.
 
+On macOS, `scripts/build_release.sh` performs a local ad-hoc re-sign after building and verifies each bundle. This repairs signatures invalidated when a generator adds bundle resources after linking. Ad-hoc signing identifies a self-built bundle consistently on the local machine; it is not Developer ID signing, notarization or authorization for redistribution. Set `MOTION_FIELD_ADHOC_SIGN=0` only when another signing pipeline will sign the bundles.
+
 ## macOS user-level installation
 
 Quit the DAW before replacing a bundle. Copy the built bundles into the current user's plug-in directories:
@@ -28,7 +30,7 @@ cp -R /path/to/Phaseweft.vst3 "$HOME/Library/Audio/Plug-Ins/VST3/"
 cp -R /path/to/Phaseweft.component "$HOME/Library/Audio/Plug-Ins/Components/"
 ```
 
-Restart the DAW and request a plug-in rescan. The Standalone application can run directly from its build output. The locally built bundles are not Apple-notarized; macOS may apply its normal security policy according to how the files were created or transferred. Do not disable system-wide security controls. If a locally built copy is rejected, rebuild it from the trusted source checkout and inspect the exact Gatekeeper or signature message.
+Restart the DAW and request a plug-in rescan. The Standalone application can run directly from its build output. The locally built bundles are not Apple-notarized; macOS may apply its normal security policy according to how the files were created or transferred. Do not disable system-wide security controls. If a locally built copy is rejected, rebuild it from the trusted source checkout with `scripts/build_release.sh` and inspect the exact Gatekeeper or signature message.
 
 ## Windows user-level installation
 

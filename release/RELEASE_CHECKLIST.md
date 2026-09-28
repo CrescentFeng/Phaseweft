@@ -52,8 +52,8 @@ No tag or GitHub release should be described as complete until every required it
 
 - [x] Version and changelog finalized as v0.7.0.
 - [x] Feature freeze regression passes.
-- [ ] Source archive inspected for generated or private content.
-- [ ] SHA-256 generated and independently checked.
+- [x] Source archive inspected for generated or private content.
+- [x] SHA-256 generated and independently checked.
 - [x] No optional binaries attached; v0.7.0 is explicitly source-only.
 - [ ] Git tag matches the tested source exactly.
 - [ ] Published archive downloaded and rebuilt successfully.

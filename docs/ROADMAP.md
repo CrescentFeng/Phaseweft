@@ -88,7 +88,7 @@ Status: **in progress**
 - [x] Freeze production features for v0.7.0.
 - [x] Repeat the clean-clone build and automated regression with pinned JUCE 9.0.2.
 - [x] Confirm that post-G3 changes do not alter the production DSP or plug-in implementation.
-- [ ] Audit the final tracked tree and release archive.
+- [x] Audit the tracked tree and independently rebuild the release-candidate archive.
 - [ ] Publish release notes and a source archive with SHA-256.
 - [x] Omit development binaries rather than distribute unsigned/unnotarized bundles.
 - [ ] Create the source tag only after every required pre-publication check passes.
