@@ -2,7 +2,7 @@
 
 Date: 2026-09-28
 
-Status: **in progress — one required screenshot remains**
+Status: **complete**
 
 ## Repository-scope cleanup
 
@@ -15,6 +15,7 @@ Ignored CMake build directories remain outside version control because they are 
 - Added `ARCHITECTURE.md` for the signal path, timing, permanent parameter IDs and `MotionFieldState` compatibility contract.
 - Added `INSTALLATION.md` and `TROUBLESHOOTING.md` for clean source builds, local plug-in installation, DAW discovery and state/timing diagnosis.
 - Added `DEMO_AUDIO.md` and README playback links for the deterministic engine and featured-preset renders.
+- Added a deterministic v0.7 editor snapshot and its repository-native renderer.
 - Updated the preset, product, UX, provenance, known-issues and QA documents to reflect v0.7 behaviour rather than older v0.2/v0.6 wording.
 - Kept the private all-rights-reserved licence, provisional naming, unsigned/unnotarized status and unverified Windows DAW status explicit.
 
@@ -29,8 +30,11 @@ The fourth engine file was renamed from `04_motion_field.wav` to `04_field_matri
 - The complete Release build succeeded for the DSP tools, Standalone, VST3 and AU targets.
 - CTest passed 4/4: core, preset audit, long-run stress and plug-in state.
 - Regenerated demonstration audio matched all 11 retained files byte-for-byte.
-- Every current relative Markdown link resolves to a repository file. The link check will be repeated after the final screenshot is added.
+- `motion_field_ui_snapshot` rendered the 1040×650 editor twice with an identical SHA-256: `4c2838c5d73297239a68eed5231c5fe2332535a71c0584939b033227938d0c12`.
+- Every current relative Markdown link resolves to a repository file.
 
-## Open item
+## Interface evidence
 
-A real v0.7 source-built Standalone screenshot is still required. No unrelated local image, synthetic mock-up or screenshot from an obsolete 0.6 build will be committed as a substitute. G4 remains in progress until the correct project image is available and the final documentation-link check passes.
+`artifacts/screenshots/phaseweft-v0.7-editor.png` is rendered directly from the current `MotionFieldEditor` at its documented default size, with `Utility / Mix Air Motion` loaded. It is not a desktop capture, external image or mock-up. The renderer is `tests/RenderUISnapshot.cpp` and is built as `motion_field_ui_snapshot` when plug-in targets are enabled.
+
+G4 satisfies its exit criterion: a visitor can understand the signal design, build and install the project, audition the deterministic examples, inspect the current interface and follow the verified support boundary without private context.

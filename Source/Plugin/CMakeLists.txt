@@ -57,3 +57,16 @@ target_link_libraries(motion_field_plugin_state_tests PRIVATE
   juce::juce_recommended_config_flags
   juce::juce_recommended_warning_flags)
 add_test(NAME motion_field_plugin_state COMMAND motion_field_plugin_state_tests)
+
+add_executable(motion_field_ui_snapshot EXCLUDE_FROM_ALL
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../tests/RenderUISnapshot.cpp)
+target_include_directories(motion_field_ui_snapshot PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}/../DSP
+  ${CMAKE_CURRENT_BINARY_DIR}/MotionField_artefacts/JuceLibraryCode)
+target_link_libraries(motion_field_ui_snapshot PRIVATE
+  MotionField
+  juce::juce_audio_utils
+  juce::juce_dsp
+  juce::juce_recommended_config_flags
+  juce::juce_recommended_warning_flags)

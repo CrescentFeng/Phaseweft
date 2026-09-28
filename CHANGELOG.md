@@ -16,7 +16,7 @@
 - Added plug-in-state regression tests for factory-preset identity across binary state round-trips.
 - Completed the Phaseweft-identity REAPER 7.67 VST3/AU G3 matrix on macOS arm64: playback, recall, automation, bypass, freeze/unfreeze, host PDC, online rendering and multi-rate offline rendering passed.
 - Passed current Apple `auval`, including mono/stereo, parameter scheduling, bypass, latency and 11.025–192 kHz rendering.
-- Advanced G4 public-facing documentation with source-built installation and troubleshooting, DSP/state architecture, and an indexed 11-file demonstration set. The final source-built interface capture remains open.
+- Completed G4 public-facing documentation with source-built installation and troubleshooting, DSP/state architecture, an indexed 11-file demonstration set and a reproducible current-editor PNG renderer.
 - Renamed the fourth engine comparison from `04_motion_field.wav` to `04_field_matrix.wav` to match the current public engine label; the audio content is unchanged.
 - Kept commercial naming, signing, notarization, pricing and installer work outside the current completion definition.
 

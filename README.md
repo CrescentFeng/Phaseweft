@@ -2,9 +2,11 @@
 
 Phaseweft is a JUCE audio-effect project that explores content-aware flanging. Alongside conventional and through-zero flanging, it can separate transient and sustain motion or distribute related delay trajectories across three reconstructing frequency bands.
 
-> **Project status:** private GitHub portfolio candidate, currently v0.7.0. G3 REAPER VST3/AU host verification is complete on macOS arm64. G4 documentation and demonstration work is in progress.
+> **Project status:** private GitHub portfolio candidate, currently v0.7.0. G3 REAPER VST3/AU host verification and G4 documentation/demonstration are complete. G5 portfolio-release preparation is next.
 
 Phaseweft is presented as an engineering and audio-DSP project, not as a commercially released product. The project name and provisional manufacturer metadata have not received formal trademark clearance. No signed or notarized installer is currently supplied.
+
+![Phaseweft v0.7 editor](artifacts/screenshots/phaseweft-v0.7-editor.png)
 
 ## Highlights
 
@@ -135,8 +137,9 @@ The internal state root remains `MotionFieldState` for compatibility with earlie
 
 - `Source/DSP` — dependency-free DSP and factory presets.
 - `Source/Plugin` — JUCE processor, editor and state migration.
-- `tests` — unit, stress, preset, state and demo-render targets.
+- `tests` — unit, stress, preset, state, audio-render and UI-snapshot targets.
 - `artifacts/audio` — reference and featured-preset demonstrations.
+- `artifacts/screenshots` — reproducible interface evidence generated from the current editor source.
 - `docs` — architecture, specifications, build guidance, audit record, QA evidence and roadmap.
 - `release` — DAW matrix, known issues and validation summaries.
 - `.github/workflows` — macOS and Windows build/test workflow.

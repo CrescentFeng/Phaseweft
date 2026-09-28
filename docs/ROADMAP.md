@@ -68,9 +68,9 @@ sleep/wake cycle remains a documented non-blocking gap.
 
 ## G4 — Documentation and demonstration
 
-Status: **in progress**
+Status: **complete**
 
-- [ ] Add a current GUI screenshot taken from the v0.7 source build.
+- [x] Add a current GUI screenshot rendered from the v0.7 source build.
 - [x] Review and index the 11-file deterministic demo-audio set.
 - [x] Document DSP architecture, controls, presets and state compatibility.
 - [x] Add installation and troubleshooting instructions for source-built plug-ins.
@@ -79,11 +79,11 @@ Status: **in progress**
 
 Exit criterion: a new visitor can understand, build, audition and evaluate the project without private context.
 
-Progress evidence: `docs/G4_REPORT.md`. The screenshot remains the only open G4 item and will not be substituted with an unrelated image or a mock-up.
+Exit evidence: `docs/G4_REPORT.md` and `artifacts/screenshots/phaseweft-v0.7-editor.png`.
 
 ## G5 — GitHub portfolio release
 
-Status: **not started**
+Status: **next**
 
 - Freeze features for v0.7.0.
 - Repeat clean-clone build, automated tests and G3 host verification.
