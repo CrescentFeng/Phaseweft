@@ -49,22 +49,26 @@ Exit evidence: `docs/G2_REPORT.md`.
 
 ## G3 — Phaseweft v0.7 host verification
 
-Status: **next**
+Status: **complete**
 
-- Test REAPER discovery and loading for VST3 and AU.
-- Test playback, stop/start, UI reopen and resize.
-- Test save, close, reopen and exact parameter recall.
-- Test automation write/read, bypass, freeze and offline render.
-- Test BPM, time-signature, sample-rate and buffer-size changes.
-- Confirm host latency compensation.
-- Fix the factory-preset display-name recall limitation.
-- Classify every finding as Blocker, Major, Minor or Suggestion.
+- [x] Test REAPER discovery and loading for VST3 and AU.
+- [x] Test playback, stop/start, UI reopen and resize.
+- [x] Test save, close, reopen and exact parameter recall.
+- [x] Test automation write/read, bypass, freeze and offline render.
+- [x] Test BPM, time-signature, sample-rate and buffer-size changes.
+- [x] Confirm host latency compensation for VST3 and AU.
+- [x] Fix the factory-preset display-name recall limitation.
+- [x] Classify every finding as Blocker, Major, Minor, environment or not run.
 
 Exit criterion: no unresolved Blocker and no unexplained project-recall, crash, audio-corruption or latency-compensation defect.
 
+Exit evidence: `docs/G3_REPORT.md`. Live 192 kHz was limited by the built-in audio
+device, while 192 kHz offline and Apple AU rendering passed. A forced full-system
+sleep/wake cycle remains a documented non-blocking gap.
+
 ## G4 — Documentation and demonstration
 
-Status: **not started**
+Status: **next**
 
 - Add current GUI screenshots.
 - Review and trim the demo-audio set.

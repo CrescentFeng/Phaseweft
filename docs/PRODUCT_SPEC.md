@@ -1,4 +1,4 @@
-# Project specification — v0.6
+# Project specification — v0.7
 
 ## Product promise
 
@@ -70,4 +70,4 @@ A preset-audit executable measures peak level, RMS change and DC bias for all fa
 
 ## Project identity
 
-Phaseweft is the working project name as of v0.6. It has not received formal trademark clearance and is not presented as a commercially released product. Manufacturer text and public distribution credentials remain provisional. The internal `MotionFieldState` root and existing parameter IDs remain stable so documentation or branding changes do not silently invalidate saved sessions.
+Phaseweft is the working project name as of v0.7. It has not received formal trademark clearance and is not presented as a commercially released product. Manufacturer text and public distribution credentials remain provisional. The internal `MotionFieldState` root and existing parameter IDs remain stable so documentation or branding changes do not silently invalidate saved sessions.

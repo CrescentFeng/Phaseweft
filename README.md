@@ -2,7 +2,7 @@
 
 Phaseweft is a JUCE audio-effect project that explores content-aware flanging. Alongside conventional and through-zero flanging, it can separate transient and sustain motion or distribute related delay trajectories across three reconstructing frequency bands.
 
-> **Project status:** private GitHub portfolio candidate, currently v0.6.0. G2 clean-clone and macOS/Windows CI verification is complete. A fresh Phaseweft-identity REAPER validation is still required before a completed portfolio release.
+> **Project status:** private GitHub portfolio candidate, currently v0.7.0. G3 REAPER VST3/AU host verification is complete on macOS arm64. G4 documentation and demonstration work is next.
 
 Phaseweft is presented as an engineering and audio-DSP project, not as a commercially released product. The project name and provisional manufacturer metadata have not received formal trademark clearance. No signed or notarized installer is currently supplied.
 
@@ -26,11 +26,11 @@ Phaseweft is presented as an engineering and audio-DSP project, not as a commerc
 | Target | Status |
 |---|---|
 | macOS Standalone | Clean-clone and CI builds pass |
-| macOS VST3 | Clean-clone and CI builds pass; v0.6 pluginval strictness 10 passed |
-| macOS Audio Unit | Clean-clone and CI builds pass; v0.6 pluginval and Apple `auval` passed |
+| macOS VST3 | Clean-clone and CI builds pass; REAPER 7.67 G3 host workflow passed |
+| macOS Audio Unit | Clean-clone and CI builds pass; REAPER 7.67 G3 and current Apple `auval` passed |
 | Universal macOS `x86_64;arm64` | Current G2 clean-clone and CI build/test pass |
 | Windows VST3/Standalone | Release build and 4/4 automated tests pass on `windows-2022` CI; DAW use is not yet verified |
-| REAPER host workflow under Phaseweft identity | Not yet complete; scheduled for G3 |
+| REAPER host workflow under Phaseweft identity | VST3/AU passed on macOS arm64; see `docs/G3_REPORT.md` |
 
 Only rows explicitly marked as verified are support claims.
 
@@ -131,7 +131,7 @@ The internal state root remains `MotionFieldState` for compatibility with earlie
 
 ## Evidence and limitations
 
-The automated suite covers multi-rate processing, mode changes, latency, parameter stress, preset safety, state migration and malformed input. Historical v0.6 validation passed VST3/AU pluginval strictness 10 and Apple `auval`. See [QA_REPORT.md](docs/QA_REPORT.md) and [V060_SUMMARY.md](release/validation/V060_SUMMARY.md).
+The automated suite covers multi-rate processing, mode changes, latency, parameter stress, preset safety, state migration and malformed input. Current G3 evidence covers REAPER VST3/AU discovery, playback, automation, bypass, freeze, recall, host PDC and rendering; current Apple `auval` also passes. See [G3_REPORT.md](docs/G3_REPORT.md), [QA_REPORT.md](docs/QA_REPORT.md) and [V060_SUMMARY.md](release/validation/V060_SUMMARY.md).
 
 The current limitations are tracked in [KNOWN_ISSUES.md](release/KNOWN_ISSUES.md). The path to a completed GitHub portfolio release is defined in [ROADMAP.md](docs/ROADMAP.md).
 

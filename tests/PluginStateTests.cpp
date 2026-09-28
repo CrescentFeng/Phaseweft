@@ -105,6 +105,25 @@ void testCurrentStateRoundTrip() {
               "current state must round-trip exactly");
 }
 
+void testFactoryPresetIdentitySurvivesStateRoundTrip() {
+    constexpr auto presetIndex = 12U;
+    MotionFieldProcessor source;
+    source.applyFactoryPreset(presetIndex);
+    check(source.currentFactoryPresetIndex() == static_cast<int>(presetIndex),
+          "loaded factory preset must be identified from its parameter state");
+
+    juce::MemoryBlock data;
+    source.getStateInformation(data);
+    MotionFieldProcessor destination;
+    destination.setStateInformation(data.getData(), static_cast<int>(data.getSize()));
+    check(destination.currentFactoryPresetIndex() == static_cast<int>(presetIndex),
+          "factory preset identity must survive host state recall");
+
+    setPlainValue(destination, "mix", 0.17f);
+    check(destination.currentFactoryPresetIndex() == -1,
+          "edited factory preset must be identified as a custom state");
+}
+
 void testMalformedStateIsIgnored() {
     MotionFieldProcessor processor;
     const auto before = rawValue(processor, "feedback");
@@ -128,6 +147,7 @@ int main() {
     testPublishedStateIdentityContract();
     testLegacyMigrationUsesCanonicalDefaults();
     testCurrentStateRoundTrip();
+    testFactoryPresetIdentitySurvivesStateRoundTrip();
     testMalformedStateIsIgnored();
     if (failures == 0) std::cout << "All plug-in state tests passed\n";
     return failures == 0 ? EXIT_SUCCESS : EXIT_FAILURE;

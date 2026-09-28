@@ -113,12 +113,13 @@ MotionFieldEditor::MotionFieldEditor(MotionFieldProcessor& owner)
     redoButton_.setTooltip("Redo the most recently undone edit");
     aButton_.setTooltip("Recall comparison state A; the current state is saved first");
     bButton_.setTooltip("Recall comparison state B; the current state is saved first");
-    undoButton_.onClick = [this] { processor_.undo(); presetSelector_.setSelectedId(1); };
-    redoButton_.onClick = [this] { processor_.redo(); presetSelector_.setSelectedId(1); };
-    aButton_.onClick = [this] { processor_.selectAB(0); presetSelector_.setSelectedId(1); };
-    bButton_.onClick = [this] { processor_.selectAB(1); presetSelector_.setSelectedId(1); };
+    undoButton_.onClick = [this] { processor_.undo(); updatePresetDisplay(); };
+    redoButton_.onClick = [this] { processor_.redo(); updatePresetDisplay(); };
+    aButton_.onClick = [this] { processor_.selectAB(0); updatePresetDisplay(); };
+    bButton_.onClick = [this] { processor_.selectAB(1); updatePresetDisplay(); };
 
     addAndMakeVisible(visualizer_);
+    updatePresetDisplay();
     startTimerHz(12);
     setResizable(true, true);
     setResizeLimits(820, 520, 1400, 880);
@@ -144,7 +145,25 @@ void MotionFieldEditor::selectPreset(int presetIndex) {
                         juce::dontSendNotification);
 }
 
+void MotionFieldEditor::updatePresetDisplay() {
+    const auto presetIndex = processor_.currentFactoryPresetIndex();
+    if (presetIndex == selectedPresetIndex_) return;
+
+    selectedPresetIndex_ = presetIndex;
+    if (presetIndex < 0) {
+        presetSelector_.setSelectedId(1, juce::dontSendNotification);
+        presetInfo_.setText("Custom state", juce::dontSendNotification);
+        return;
+    }
+
+    const auto& preset = motionfield::factoryPresets[static_cast<std::size_t>(presetIndex)];
+    presetSelector_.setSelectedId(presetIndex + 2, juce::dontSendNotification);
+    presetInfo_.setText(juce::String(preset.category) + " / " + preset.name,
+                        juce::dontSendNotification);
+}
+
 void MotionFieldEditor::timerCallback() {
+    updatePresetDisplay();
     const auto synced = syncButton_.getToggleState();
     divisionSelector_.setEnabled(synced);
     knobs_[0].setEnabled(!synced);
@@ -169,7 +188,7 @@ void MotionFieldEditor::paint(juce::Graphics& graphics) {
                       juce::Justification::centredLeft);
     graphics.setColour(juce::Colour(0xffffc765));
     graphics.setFont(juce::FontOptions(11.5f, juce::Font::bold));
-    graphics.drawText("ADAPTIVE FLANGING INSTRUMENT / PRIVATE BETA 0.6",
+    graphics.drawText("ADAPTIVE FLANGING INSTRUMENT / PORTFOLIO CANDIDATE 0.7",
                       30, 51, getWidth() - 60, 19, juce::Justification::centredLeft);
 
     graphics.setColour(juce::Colour(0x3a4e6871));

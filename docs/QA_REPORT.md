@@ -1,6 +1,6 @@
-# QA report — Phaseweft v0.6.0 GitHub portfolio baseline
+# QA report — Phaseweft v0.7.0 GitHub portfolio candidate
 
-Date: 2026-09-27
+Date: 2026-09-28
 
 ## Automated coverage
 
@@ -20,6 +20,8 @@ Date: 2026-09-27
 | 45-second automation/denormal stress at 44.1/48/96/192 kHz | Pass |
 | Legacy state migration from missing v0.2 parameters | Pass |
 | Current binary state round-trip | Pass |
+| Factory-preset identity after binary state round-trip | Pass |
+| Edited factory state becomes `Custom state` | Pass |
 | Malformed and foreign state rejection | Pass |
 
 Commands:
@@ -40,7 +42,7 @@ ASan/UBSan CTest result: **3/3 passed** (`motion_field_core`, `motion_field_pres
 | macOS arm64 Standalone | Built |
 | macOS arm64 Audio Unit | Built |
 | macOS arm64 VST3 | Built |
-| Windows VST3 | Not tested |
+| Windows VST3/Standalone | Release build and 4/4 tests pass in GitHub Actions; DAW use not tested |
 | macOS universal `x86_64 arm64` Standalone | Built; arm64 executed |
 | macOS universal `x86_64 arm64` Audio Unit | Built; arm64 validated |
 | macOS universal `x86_64 arm64` VST3 | Built; arm64 validated |
@@ -76,15 +78,29 @@ ASan/UBSan CTest result: **3/3 passed** (`motion_field_core`, `motion_field_pres
 - The factory preset browser returns to its neutral label after project recall even though the actual parameter state is restored; this is recorded as a UX limitation rather than a state-loss failure.
 - Full-speed offline rendering produced an 8.000-second, 48 kHz, 24-bit stereo WAV. REAPER reported -6.5 dBFS peak and zero clipped samples.
 - The local project/render artifacts were removed from the GitHub working tree during G0 cleanup because they belong to an obsolete identity and are not current release evidence.
-- This result predates the Phaseweft identity migration. Phaseweft still requires a fresh REAPER load/playback/recall/bounce pass under its current plug-in identity.
+- This result predates the Phaseweft identity migration and is retained only as historical context. The current-identity result below supersedes it.
+
+## REAPER host test — Phaseweft v0.7 current identity
+
+- REAPER 7.67 on macOS 26.6.2/arm64 discovered and loaded both installed Phaseweft VST3 and AU bundles.
+- Both formats passed playback, stop/start, editor reopen, bypass, stereo freeze/playback/unfreeze and save/close/reopen recall.
+- The VST3 editor also passed resize, preset navigation, Undo/Redo and A/B interaction checks.
+- The factory-preset display-name limitation was fixed. `Utility / Mix Air Motion` and all eight continuous values survived VST3 and AU project recall.
+- Host-native Mix envelopes played from 0.20 through 0.80 and back in both formats.
+- A synced VST3 run passed 120 BPM 4/4, 90 BPM 3/4 and 150 BPM 7/8 markers.
+- REAPER reported Phaseweft's 192-sample latency at 48 kHz and applied 512-sample block-aligned PDC for both formats.
+- Live VST3 playback passed all required buffer sizes at 44.1 kHz and additionally passed 48/96 kHz at 512 samples.
+- VST3 offline renders passed at 44.1, 48, 96 and 192 kHz. AU 48 kHz/24-bit stereo online and offline renders also passed with zero clipped samples.
+- Current Apple `auval` passed mono/stereo, latency, bypass, parameter scheduling, custom UI and renders through 192 kHz.
+
+The complete sanitized evidence and finding dispositions are in `docs/G3_REPORT.md`.
 
 ## Not yet GitHub-release-qualified
 
-- A repository licence and third-party notice set have not been selected.
-- The documented clean-clone dependency flow and public CI run remain open.
-- Windows and Intel execution have not been observed.
-- Automation recording, bypass/freeze, sleep/wake and live sample-rate/device switching remain open.
-- Phaseweft-identity REAPER VST3/AU verification remains open.
+- G4 screenshots, installation/troubleshooting guidance and final demonstration review remain open.
+- G5 feature-freeze regression, archive inspection, checksum, tag and independent rebuild remain open.
+- Windows DAW and Intel-host execution have not been observed and must not be claimed.
+- A forced full-system sleep/wake cycle was not run; audio-graph restarts and live rate changes passed.
 - Signed/notarized installers are not part of the GitHub portfolio completion definition; any attached development binary must state its limitations.
 
 ## UX interaction smoke test

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(Phaseweft VERSION 0.6.0 LANGUAGES C CXX)
+project(Phaseweft VERSION 0.7.0 LANGUAGES C CXX)
 
 option(MOTION_FIELD_BUILD_PLUGIN "Build JUCE VST3/AU/Standalone targets" ON)
 option(MOTION_FIELD_ENABLE_ASAN "Enable AddressSanitizer for core tests" OFF)

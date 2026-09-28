@@ -11,6 +11,11 @@
 - Initialized Phaseweft as an independent Git repository and selected private, all-rights-reserved terms for its initial GitHub publication.
 - Completed G2 clean-clone verification for the documented online JUCE flow, macOS arm64 and Universal builds, sanitizers, and macOS/Windows CI.
 - Fixed Windows multi-configuration CTest selection by pinning the Windows build and test presets to `Release`.
+- Advanced the project version and editor identity to the v0.7 portfolio candidate.
+- Fixed factory-preset name reconstruction after host state recall, including immediate `Custom state` display for non-factory states.
+- Added plug-in-state regression tests for factory-preset identity across binary state round-trips.
+- Completed the Phaseweft-identity REAPER 7.67 VST3/AU G3 matrix on macOS arm64: playback, recall, automation, bypass, freeze/unfreeze, host PDC, online rendering and multi-rate offline rendering passed.
+- Passed current Apple `auval`, including mono/stereo, parameter scheduling, bypass, latency and 11.025–192 kHz rendering.
 - Kept commercial naming, signing, notarization, pricing and installer work outside the current completion definition.
 
 ## 0.6.0 — 2026-09-27 (Phaseweft rebrand candidate)

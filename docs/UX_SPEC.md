@@ -1,4 +1,4 @@
-# UX specification — v0.6
+# UX specification — v0.7
 
 ## Layout
 
@@ -21,7 +21,7 @@ The display is non-interactive and cannot hide or override parameter values. Its
 
 ## A/B behaviour
 
-Two in-memory slots are initialized from the current plug-in state. When switching slots, the outgoing state is saved before the destination is recalled. The active processing state is saved normally with the host; the secondary comparison slot remains intentionally session-local in v0.6.
+Two in-memory slots are initialized from the current plug-in state. When switching slots, the outgoing state is saved before the destination is recalled. The active processing state is saved normally with the host; the secondary comparison slot remains intentionally session-local in v0.7.
 
 ## Accessibility and input
 

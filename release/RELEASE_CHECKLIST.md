@@ -28,14 +28,14 @@ No tag or GitHub release should be described as complete until every required it
 
 - [x] `MotionFieldState` and published parameter IDs protected by tests.
 - [x] Legacy/current/malformed state tests pass.
-- [ ] Phaseweft VST3 completes the REAPER G3 matrix.
-- [ ] Phaseweft AU completes the REAPER G3 matrix.
-- [ ] Save/close/reopen parameter recall passes.
-- [ ] Automation, bypass, freeze and offline render pass.
-- [ ] Tempo, sample-rate and buffer-size changes pass.
-- [ ] Host delay compensation is confirmed.
-- [ ] Preset display-name recall limitation is fixed or explicitly accepted.
-- [ ] No unresolved Blocker remains.
+- [x] Phaseweft VST3 completes the REAPER G3 matrix on macOS arm64.
+- [x] Phaseweft AU completes the REAPER G3 matrix on macOS arm64.
+- [x] Save/close/reopen parameter recall passes.
+- [x] Automation, bypass, freeze and offline render pass.
+- [x] Tempo, sample-rate and buffer-size changes pass within documented hardware limits.
+- [x] Host delay compensation is confirmed.
+- [x] Preset display-name recall limitation is fixed and regression-tested.
+- [x] No unresolved Blocker remains.
 
 ## Documentation and presentation
 

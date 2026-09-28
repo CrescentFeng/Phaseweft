@@ -38,6 +38,7 @@ public:
     const juce::AudioProcessorValueTreeState& state() const noexcept { return parameters_; }
     static juce::AudioProcessorValueTreeState::ParameterLayout createLayout();
     void applyFactoryPreset(std::size_t index);
+    [[nodiscard]] int currentFactoryPresetIndex() const noexcept;
     void undo();
     void redo();
     [[nodiscard]] bool canUndo() const;

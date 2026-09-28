@@ -20,6 +20,7 @@ public:
 private:
     void timerCallback() override;
     void selectPreset(int presetIndex);
+    void updatePresetDisplay();
 
     using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
     using ComboAttachment = juce::AudioProcessorValueTreeState::ComboBoxAttachment;
@@ -48,7 +49,9 @@ private:
     std::array<juce::Slider, 8> knobs_{};
     std::array<juce::Label, 8> labels_{};
     std::array<std::unique_ptr<SliderAttachment>, 8> attachments_{};
-    int selectedPresetIndex_{-1};
+    // Use a sentinel distinct from "custom" (-1) so the first editor refresh
+    // always initialises the preset label, including for restored custom states.
+    int selectedPresetIndex_{-2};
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MotionFieldEditor)
 };

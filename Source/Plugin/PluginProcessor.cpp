@@ -134,6 +134,38 @@ void MotionFieldProcessor::applyFactoryPreset(std::size_t index) {
     setParameter("mix", static_cast<float>(preset.parameters.mix));
 }
 
+int MotionFieldProcessor::currentFactoryPresetIndex() const noexcept {
+    const auto equals = [](float actual, double expected) {
+        constexpr auto tolerance = 5.0e-4f;
+        return std::abs(actual - static_cast<float>(expected)) <= tolerance;
+    };
+    const auto current = readParameters();
+    const auto sync = parameters_.getRawParameterValue("sync")->load() >= 0.5f;
+    const auto division = juce::roundToInt(
+        parameters_.getRawParameterValue("division")->load());
+    const auto transport = juce::roundToInt(
+        parameters_.getRawParameterValue("transport")->load());
+
+    for (std::size_t index = 0; index < motionfield::factoryPresets.size(); ++index) {
+        const auto& preset = motionfield::factoryPresets[index];
+        const auto& expected = preset.parameters;
+        if (current.mode == expected.mode
+            && sync == preset.tempoSync
+            && division == preset.divisionIndex
+            && transport == preset.transportMode
+            && equals(static_cast<float>(current.rateHz), expected.rateHz)
+            && equals(static_cast<float>(current.motion), expected.motion)
+            && equals(static_cast<float>(current.focus), expected.focus)
+            && equals(static_cast<float>(current.depth), expected.depth)
+            && equals(static_cast<float>(current.spread), expected.spread)
+            && equals(static_cast<float>(current.character), expected.character)
+            && equals(static_cast<float>(current.feedback), expected.feedback)
+            && equals(static_cast<float>(current.mix), expected.mix))
+            return static_cast<int>(index);
+    }
+    return -1;
+}
+
 void MotionFieldProcessor::undo() {
     undoManager_.undo();
 }
