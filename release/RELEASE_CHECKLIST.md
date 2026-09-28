@@ -16,13 +16,13 @@ No tag or GitHub release should be described as complete until every required it
 
 ## Reproducible build
 
-- [ ] Fresh clone obtains all dependencies using documented steps.
-- [ ] Core-only Release build and CTest pass.
-- [ ] macOS Standalone, VST3 and AU build and CTest pass.
-- [ ] Universal `x86_64;arm64` outputs inspected.
-- [ ] ASan/UBSan suite rerun from the release source.
-- [ ] GitHub Actions macOS job passes.
-- [ ] Windows workflow passes, or Windows claims are explicitly removed from the release.
+- [x] Fresh clone obtains all dependencies using documented steps.
+- [x] Core-only Release build and CTest pass.
+- [x] macOS Standalone, VST3 and AU build and CTest pass.
+- [x] Universal `x86_64;arm64` outputs inspected.
+- [x] ASan/UBSan suite rerun from the release source.
+- [x] GitHub Actions macOS job passes.
+- [x] Windows workflow passes, or Windows claims are explicitly removed from the release.
 
 ## Compatibility and host verification
 
@@ -41,7 +41,7 @@ No tag or GitHub release should be described as complete until every required it
 
 - [x] README states verified support and limitations accurately.
 - [x] G0 audit and GitHub roadmap are present.
-- [ ] Build commands pass when copied from the README.
+- [x] Build commands pass when copied from the README.
 - [ ] Current GUI screenshots added.
 - [ ] Demo audio reviewed and linked.
 - [ ] Installation and troubleshooting instructions complete.

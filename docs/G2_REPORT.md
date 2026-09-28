@@ -1,7 +1,7 @@
 # G2 clean-clone build and CI report
 
 Date: 2026-09-28
-Status: **IN PROGRESS**
+Status: **PASS**
 
 ## Clean-clone baseline
 
@@ -35,12 +35,23 @@ because the Visual Studio multi-configuration generator built `Debug`, while CTe
 was invoked without a configuration and therefore reported every test as `Not Run`.
 
 `CMakePresets.json` now explicitly selects `Release` for the Windows build and test
-presets. A passing workflow on the corrected revision is still required before G2
-can be marked complete.
+presets. Corrected workflow run
+[`36378157985`](https://github.com/CrescentFeng/Phaseweft/actions/runs/36378157985)
+passed both jobs:
 
-## Remaining G2 gate
+- macOS 14 Universal Release configure/build/test: pass, 4/4 tests.
+- Windows 2022 Release configure/build/test: pass, 4/4 tests.
 
-- Push the corrected preset and documentation revision.
-- Confirm both macOS and Windows GitHub Actions jobs pass.
-- Update this report, the roadmap, README and release checklist with the verified
-  result.
+The workflow checkout action was also moved to the current Node 24-based major
+version after the runner reported the Node 20 deprecation warning.
+
+## G2 conclusion
+
+- The documented dependency acquisition works from a new clone.
+- Core, preset, long-run and plug-in-state tests pass.
+- macOS arm64 and Universal Standalone/VST3/AU builds pass.
+- Universal executable architectures are verified as `x86_64 arm64`.
+- ASan/UBSan tests pass.
+- macOS and Windows GitHub Actions jobs pass.
+
+G2 is complete. G3 Phaseweft v0.7 host verification is next.

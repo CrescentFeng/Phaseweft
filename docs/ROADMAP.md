@@ -35,21 +35,21 @@ Exit criterion: the private repository has explicit rights terms, reproducible d
 
 ## G2 — Clean-clone reproducible build and CI
 
-Status: **next**
+Status: **complete**
 
-- Build from a fresh clone using only documented dependency steps.
-- Run core, preset, long-run and plug-in-state tests.
-- Build Standalone, VST3 and AU on macOS.
-- Revalidate universal `x86_64;arm64` outputs.
-- Exercise the GitHub Actions macOS workflow.
-- Run or explicitly downgrade the unverified Windows workflow claim.
-- Add status badges only after workflows pass in the public repository.
+- [x] Build from a fresh clone using only documented dependency steps.
+- [x] Run core, preset, long-run and plug-in-state tests.
+- [x] Build Standalone, VST3 and AU on macOS.
+- [x] Revalidate universal `x86_64;arm64` outputs.
+- [x] Exercise the GitHub Actions macOS workflow.
+- [x] Pass the Windows Release build and automated test workflow.
+- [x] Defer a status badge while the repository remains private.
 
-Exit criterion: a clean clone and CI can reproduce every claimed build and test result.
+Exit evidence: `docs/G2_REPORT.md`.
 
 ## G3 — Phaseweft v0.7 host verification
 
-Status: **not started**
+Status: **next**
 
 - Test REAPER discovery and loading for VST3 and AU.
 - Test playback, stop/start, UI reopen and resize.

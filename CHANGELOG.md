@@ -9,6 +9,8 @@
 - Added a hash-pinned JUCE 9.0.2 FetchContent path with an explicit local-checkout override.
 - Documented third-party licensing, reproducible asset provenance, contribution and security policies.
 - Initialized Phaseweft as an independent Git repository and selected private, all-rights-reserved terms for its initial GitHub publication.
+- Completed G2 clean-clone verification for the documented online JUCE flow, macOS arm64 and Universal builds, sanitizers, and macOS/Windows CI.
+- Fixed Windows multi-configuration CTest selection by pinning the Windows build and test presets to `Release`.
 - Kept commercial naming, signing, notarization, pricing and installer work outside the current completion definition.
 
 ## 0.6.0 — 2026-09-27 (Phaseweft rebrand candidate)

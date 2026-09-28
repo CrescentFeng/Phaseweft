@@ -2,7 +2,7 @@
 
 Phaseweft is a JUCE audio-effect project that explores content-aware flanging. Alongside conventional and through-zero flanging, it can separate transient and sustain motion or distribute related delay trajectories across three reconstructing frequency bands.
 
-> **Project status:** private GitHub portfolio candidate, currently v0.6.0. The source builds and the automated suite passes on the documented macOS development environment. A fresh Phaseweft-identity REAPER validation is still required before a completed portfolio release.
+> **Project status:** private GitHub portfolio candidate, currently v0.6.0. G2 clean-clone and macOS/Windows CI verification is complete. A fresh Phaseweft-identity REAPER validation is still required before a completed portfolio release.
 
 Phaseweft is presented as an engineering and audio-DSP project, not as a commercially released product. The project name and provisional manufacturer metadata have not received formal trademark clearance. No signed or notarized installer is currently supplied.
 
@@ -25,11 +25,11 @@ Phaseweft is presented as an engineering and audio-DSP project, not as a commerc
 
 | Target | Status |
 |---|---|
-| macOS Standalone | Builds and automated tests pass |
-| macOS VST3 | Builds; v0.6 pluginval strictness 10 passed |
-| macOS Audio Unit | Builds; v0.6 pluginval and Apple `auval` passed |
-| Universal macOS `x86_64;arm64` | Historical v0.6 build validated; current clean-build retest remains in G2 |
-| Windows VST3/Standalone | CI definition exists; execution has not yet been verified |
+| macOS Standalone | Clean-clone and CI builds pass |
+| macOS VST3 | Clean-clone and CI builds pass; v0.6 pluginval strictness 10 passed |
+| macOS Audio Unit | Clean-clone and CI builds pass; v0.6 pluginval and Apple `auval` passed |
+| Universal macOS `x86_64;arm64` | Current G2 clean-clone and CI build/test pass |
+| Windows VST3/Standalone | Release build and 4/4 automated tests pass on `windows-2022` CI; DAW use is not yet verified |
 | REAPER host workflow under Phaseweft identity | Not yet complete; scheduled for G3 |
 
 Only rows explicitly marked as verified are support claims.

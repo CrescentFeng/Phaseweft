@@ -30,7 +30,8 @@ Verification:
 - Full Standalone/VST3/AU build from the extracted archive: pass.
 - CTest: 4/4 pass.
 - Live archive transfer from the G1 working tree was interrupted by a partial network
-  transfer. Online clean-clone verification remains a G2/CI gate.
+  transfer. The later online clean-clone verification passed in G2; see
+  `docs/G2_REPORT.md`.
 
 ## Asset publication
 
@@ -53,4 +54,5 @@ The owner may manually replace the Phaseweft `LICENSE` before a future public re
 - Retained assets have reproducible provenance.
 - The independent Git repository and candidate tracked-file set are clean.
 
-G1 is complete. G2 clean-clone and CI verification is next.
+G1 is complete. G2 clean-clone and CI verification was the next gate and has since
+passed; see `docs/G2_REPORT.md`.

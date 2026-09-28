@@ -18,7 +18,7 @@ jobs:
             preset: windows-release
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Configure
         run: cmake --preset "${{ matrix.preset }}"
       - name: Build
