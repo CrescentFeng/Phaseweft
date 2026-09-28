@@ -2,10 +2,9 @@
 
 ## Release blockers
 
-- No repository licence has been selected. Public visibility must not be confused with permission to redistribute.
 - A clean clone has not yet demonstrated the documented JUCE dependency flow in G2.
 - Phaseweft has not completed the G3 REAPER VST3/AU host matrix under its current identity.
-- GitHub Actions exists but has not yet passed in the final public repository context.
+- GitHub Actions must pass on the final G2 source revision.
 
 ## Functional and validation issues
 
@@ -16,6 +15,8 @@
 
 ## Presentation and distribution limitations
 
+- The repository currently uses private, all-rights-reserved terms. The licence must be
+  reviewed before any future change to public visibility.
 - The UI still displays `PRIVATE BETA 0.6`; this must be replaced before G4 screenshots.
 - The Phaseweft and Crescent Audio names are provisional and are not represented as trademark-cleared.
 - No signed or notarized public binary is supplied. Signing/notarization is optional future commercial work, not a source-project blocker.

@@ -53,7 +53,11 @@
   "buildPresets": [
     { "name": "core-release", "configurePreset": "core-release" },
     { "name": "macos-universal-release", "configurePreset": "macos-universal-release" },
-    { "name": "windows-release", "configurePreset": "windows-release" }
+    {
+      "name": "windows-release",
+      "configurePreset": "windows-release",
+      "configuration": "Release"
+    }
   ],
   "testPresets": [
     {
@@ -69,6 +73,7 @@
     {
       "name": "windows-release",
       "configurePreset": "windows-release",
+      "configuration": "Release",
       "output": { "outputOnFailure": true }
     }
   ]

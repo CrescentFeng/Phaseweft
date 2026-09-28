@@ -6,8 +6,9 @@ Status: **PASS**
 ## Git repository
 
 - An independent Git repository was initialized on branch `main`.
-- No remote, commit or tag has been created.
-- A dry-run of the initial add produced an intentional candidate set; this report is the final additional G1 document.
+- The intentional tracked-file set was committed as `128beab` and pushed to the private
+  `CrescentFeng/Phaseweft` GitHub repository.
+- The repository remains private and has no release tag.
 - Build trees, generated plug-ins, packages, JUCE checkouts, DAW caches and common credentials are ignored.
 - The repository-wide secret and absolute-local-path scan is clean.
 
@@ -28,7 +29,8 @@ Verification:
 - Hash-verified archive configuration: pass.
 - Full Standalone/VST3/AU build from the extracted archive: pass.
 - CTest: 4/4 pass.
-- Live archive transfer from the current environment was attempted but interrupted by a partial network transfer. Public online clean-clone verification remains a G2/CI gate.
+- Live archive transfer from the G1 working tree was interrupted by a partial network
+  transfer. Online clean-clone verification remains a G2/CI gate.
 
 ## Asset publication
 

@@ -19,7 +19,7 @@ Status: **complete**
 
 Exit evidence: `docs/G0_AUDIT.md`.
 
-## G1 — Public repository and dependency hygiene
+## G1 — Repository and dependency hygiene
 
 Status: **complete**
 
