@@ -2,7 +2,7 @@
 
 Date: 2026-09-28
 
-Status: **release candidate verification in progress**
+Status: **complete**
 
 ## Feature freeze boundary
 
@@ -30,6 +30,12 @@ The archive was extracted into a separate temporary directory, configured agains
 
 Raw CMake bundles are local build products rather than release attachments. Strict signature checks can fail after generators add bundle resources. The macOS release-build script now performs and verifies an explicit local ad-hoc re-sign; this does not claim Developer ID signing or notarization.
 
-## Publication gates
+## Publication result
 
-Before creating `v0.7.0`, the final tracked tree and exact source archive must be scanned, the archive must be independently rebuilt, and its SHA-256 must be recorded. The tag and private GitHub Release will not be created until those checks pass.
+The annotated `v0.7.0` tag points to the exact tested release source at commit `3c6fe11`. The private GitHub Release was published with the source archive and its companion checksum file. It is neither a draft nor a pre-release.
+
+The published archive was downloaded again through GitHub, and its SHA-256 was verified as:
+
+`20a6e816170d52b13f377141d705d7271a1cf96c1c6491994a56fff45d48be75`
+
+That downloaded archive was extracted into a new temporary directory and rebuilt as Standalone, VST3 and Audio Unit against the verified JUCE 9.0.2 source. CTest passed 4/4. This closes the final publication gate without adding unsigned or unnotarized binary attachments.

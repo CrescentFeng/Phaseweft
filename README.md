@@ -2,7 +2,7 @@
 
 Phaseweft is a JUCE audio-effect project that explores content-aware flanging. Alongside conventional and through-zero flanging, it can separate transient and sustain motion or distribute related delay trajectories across three reconstructing frequency bands.
 
-> **Project status:** private GitHub portfolio release candidate, currently v0.7.0. G3 REAPER VST3/AU host verification and G4 documentation/demonstration are complete. G5 final archive and release publication are in progress.
+> **Project status:** complete private GitHub portfolio release, currently v0.7.0. G0–G5 are complete: the source release is published, checksum-verified, independently rebuilt, and backed by the recorded REAPER VST3/AU host-validation evidence.
 
 Phaseweft is presented as an engineering and audio-DSP project, not as a commercially released product. The project name and provisional manufacturer metadata have not received formal trademark clearance. No signed or notarized installer is currently supplied.
 
