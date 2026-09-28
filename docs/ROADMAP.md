@@ -83,17 +83,20 @@ Exit evidence: `docs/G4_REPORT.md` and `artifacts/screenshots/phaseweft-v0.7-edi
 
 ## G5 — GitHub portfolio release
 
-Status: **next**
+Status: **in progress**
 
-- Freeze features for v0.7.0.
-- Repeat clean-clone build, automated tests and G3 host verification.
-- Audit the tracked tree and release archive.
-- Publish release notes and source archive with SHA-256.
-- Optionally attach clearly labelled development binaries.
-- Create the source tag only after every required checklist item passes.
-- Download the published archive and verify it independently.
+- [x] Freeze production features for v0.7.0.
+- [x] Repeat the clean-clone build and automated regression with pinned JUCE 9.0.2.
+- [x] Confirm that post-G3 changes do not alter the production DSP or plug-in implementation.
+- [ ] Audit the final tracked tree and release archive.
+- [ ] Publish release notes and a source archive with SHA-256.
+- [x] Omit development binaries rather than distribute unsigned/unnotarized bundles.
+- [ ] Create the source tag only after every required pre-publication check passes.
+- [ ] Download the published archive and verify it independently.
 
 Exit criterion: Phaseweft can accurately be described as a complete, publicly presentable, source-buildable and host-verified GitHub audio plug-in project.
+
+Progress evidence: `docs/G5_REPORT.md`.
 
 ## Deferred commercial track
 

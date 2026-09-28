@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased — GitHub portfolio preparation
+## 0.7.0 — 2026-09-28 (GitHub portfolio release candidate)
 
 - Reframed the project from a commercial private-beta candidate to a source-buildable, host-verified GitHub portfolio project.
 - Removed generated binaries, duplicate audio, old private-beta packages, obsolete host artifacts and raw logs containing local paths from the working tree.
