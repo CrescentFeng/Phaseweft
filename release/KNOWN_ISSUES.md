@@ -18,7 +18,7 @@
 
 - The repository currently uses private, all-rights-reserved terms. The licence must be
   reviewed before any future change to public visibility.
-- The UI identifies the build as `PORTFOLIO CANDIDATE 0.7`; final G4 screenshots are still required.
+- The UI identifies the build as `PORTFOLIO CANDIDATE 0.7`; a final source-built G4 screenshot is still required.
 - The Phaseweft and Crescent Audio names are provisional and are not represented as trademark-cleared.
 - No signed or notarized public binary is supplied. Signing/notarization is optional future commercial work, not a source-project blocker.
 - Raw validation logs containing local filesystem paths are intentionally excluded; sanitized summaries are retained.

@@ -2,7 +2,7 @@
 
 Phaseweft is a JUCE audio-effect project that explores content-aware flanging. Alongside conventional and through-zero flanging, it can separate transient and sustain motion or distribute related delay trajectories across three reconstructing frequency bands.
 
-> **Project status:** private GitHub portfolio candidate, currently v0.7.0. G3 REAPER VST3/AU host verification is complete on macOS arm64. G4 documentation and demonstration work is next.
+> **Project status:** private GitHub portfolio candidate, currently v0.7.0. G3 REAPER VST3/AU host verification is complete on macOS arm64. G4 documentation and demonstration work is in progress.
 
 Phaseweft is presented as an engineering and audio-DSP project, not as a commercially released product. The project name and provisional manufacturer metadata have not received formal trademark clearance. No signed or notarized installer is currently supplied.
 
@@ -33,6 +33,16 @@ Phaseweft is presented as an engineering and audio-DSP project, not as a commerc
 | REAPER host workflow under Phaseweft identity | VST3/AU passed on macOS arm64; see `docs/G3_REPORT.md` |
 
 Only rows explicitly marked as verified are support claims.
+
+## Listen
+
+The deterministic eight-second comparison set uses one procedural source, so the engine is the main variable:
+
+| Reference | Classic | Through-Zero | Transient Split | Field Matrix |
+|---|---|---|---|---|
+| [Dry](artifacts/audio/00_dry.wav) | [Play](artifacts/audio/01_classic.wav) | [Play](artifacts/audio/02_through_zero.wav) | [Play](artifacts/audio/03_transient_split.wav) | [Play](artifacts/audio/04_field_matrix.wav) |
+
+Six additional preset renders and reproduction details are indexed in [DEMO_AUDIO.md](docs/DEMO_AUDIO.md). The files are comparison evidence rather than loudness-matched marketing masters.
 
 ## Build from source
 
@@ -82,6 +92,8 @@ ctest --preset core-release
 
 On macOS, use `macos-universal-release` for the universal build. It uses the same pinned fetch unless `MOTION_FIELD_JUCE_DIR` is provided.
 
+For bundle locations, local installation and host discovery, see [INSTALLATION.md](docs/INSTALLATION.md) and [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
+
 ## Controls
 
 | Control | Function |
@@ -113,6 +125,8 @@ Input ─┬─ 4 ms dry reference ───────────────
 
 Inactive engines remain warm. Engine changes crossfade between valid DSP states instead of starting with an empty delay line.
 
+The detailed signal, timing, parameter and saved-state design is documented in [ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
 ## State compatibility
 
 The internal state root remains `MotionFieldState` for compatibility with earlier project files. Existing host parameter IDs are treated as immutable and are covered by an automated identity-contract test. A public-facing rename must not silently break saved sessions.
@@ -123,7 +137,7 @@ The internal state root remains `MotionFieldState` for compatibility with earlie
 - `Source/Plugin` — JUCE processor, editor and state migration.
 - `tests` — unit, stress, preset, state and demo-render targets.
 - `artifacts/audio` — reference and featured-preset demonstrations.
-- `docs` — specifications, audit record, QA evidence and roadmap.
+- `docs` — architecture, specifications, build guidance, audit record, QA evidence and roadmap.
 - `release` — DAW matrix, known issues and validation summaries.
 - `.github/workflows` — macOS and Windows build/test workflow.
 - `THIRD_PARTY_NOTICES.md` — JUCE version, acquisition and licence boundary.
@@ -131,7 +145,7 @@ The internal state root remains `MotionFieldState` for compatibility with earlie
 
 ## Evidence and limitations
 
-The automated suite covers multi-rate processing, mode changes, latency, parameter stress, preset safety, state migration and malformed input. Current G3 evidence covers REAPER VST3/AU discovery, playback, automation, bypass, freeze, recall, host PDC and rendering; current Apple `auval` also passes. See [G3_REPORT.md](docs/G3_REPORT.md), [QA_REPORT.md](docs/QA_REPORT.md) and [V060_SUMMARY.md](release/validation/V060_SUMMARY.md).
+The automated suite covers multi-rate processing, mode changes, latency, parameter stress, preset safety, state migration and malformed input. Current G3 evidence covers REAPER VST3/AU discovery, playback, automation, bypass, freeze, recall, host PDC and rendering; current Apple `auval` also passes. See [G3_REPORT.md](docs/G3_REPORT.md), [QA_REPORT.md](docs/QA_REPORT.md) and the historical [V060_SUMMARY.md](release/validation/V060_SUMMARY.md).
 
 The current limitations are tracked in [KNOWN_ISSUES.md](release/KNOWN_ISSUES.md). The path to a completed GitHub portfolio release is defined in [ROADMAP.md](docs/ROADMAP.md).
 

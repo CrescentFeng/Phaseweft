@@ -1,6 +1,6 @@
 # Asset provenance
 
-Date verified: 2026-09-27
+Date verified: 2026-09-28
 
 ## Demonstration audio
 
@@ -16,7 +16,7 @@ cmake --build build/core --target motion_field_demo --parallel
 ./build/core/motion_field_demo artifacts/audio
 ```
 
-During G1, all 11 retained WAV files were regenerated to a temporary directory and compared byte-for-byte with the repository copies. The comparison passed. Files are 48 kHz, stereo, 16-bit PCM and eight seconds long.
+During G1, all 11 retained WAV files were regenerated to a temporary directory and compared byte-for-byte with the repository copies. The comparison passed. During G4, the engine render formerly named `04_motion_field.wav` was renamed to `04_field_matrix.wav` without changing its audio content, matching the current public engine label. Files are 48 kHz, stereo, 16-bit PCM and eight seconds long.
 
 ## Signal-flow diagram
 

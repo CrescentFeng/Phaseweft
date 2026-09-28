@@ -64,7 +64,7 @@ Smoothed per-band energy estimates create a low-to-high spectral-position signal
 
 ## Factory content
 
-Version 0.2 ships an initial bank of 18 compiled-in factory presets. Presets send normal host-notified parameter changes, so loading remains automation-visible and does not bypass the plug-in state model. See `PRESET_CATALOG.md`.
+Version 0.7 includes a bank of 18 compiled-in factory presets. Presets send normal host-notified parameter changes, so loading remains automation-visible and does not bypass the plug-in state model. See [PRESET_CATALOG.md](PRESET_CATALOG.md).
 
 A preset-audit executable measures peak level, RMS change and DC bias for all factory presets on the same reference source; it is part of CTest.
 

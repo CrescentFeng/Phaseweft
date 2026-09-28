@@ -17,7 +17,7 @@ The display is non-interactive and cannot hide or override parameter values. Its
 
 - Categorized menu plus previous/next navigation.
 - Loading a preset is one Undo transaction rather than twelve unrelated edits.
-- Selecting Undo/Redo or A/B marks the menu as a custom state to avoid falsely claiming exact preset recall after state operations.
+- After Undo/Redo, A/B switching or host-state recall, the menu reconstructs the exact factory-preset name only when the full parameter state matches; otherwise it displays `Custom state`.
 
 ## A/B behaviour
 

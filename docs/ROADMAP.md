@@ -68,16 +68,18 @@ sleep/wake cycle remains a documented non-blocking gap.
 
 ## G4 — Documentation and demonstration
 
-Status: **next**
+Status: **in progress**
 
-- Add current GUI screenshots.
-- Review and trim the demo-audio set.
-- Document DSP architecture, controls, presets and state compatibility.
-- Add installation and troubleshooting instructions for source-built plug-ins.
-- Publish verified performance and validation claims only.
-- Make unsigned/unnotarized binary limitations explicit if binaries are offered.
+- [ ] Add a current GUI screenshot taken from the v0.7 source build.
+- [x] Review and index the 11-file deterministic demo-audio set.
+- [x] Document DSP architecture, controls, presets and state compatibility.
+- [x] Add installation and troubleshooting instructions for source-built plug-ins.
+- [x] Publish verified performance and validation claims only.
+- [x] Make unsigned/unnotarized binary limitations explicit if binaries are offered.
 
 Exit criterion: a new visitor can understand, build, audition and evaluate the project without private context.
+
+Progress evidence: `docs/G4_REPORT.md`. The screenshot remains the only open G4 item and will not be substituted with an unrelated image or a mock-up.
 
 ## G5 — GitHub portfolio release
 

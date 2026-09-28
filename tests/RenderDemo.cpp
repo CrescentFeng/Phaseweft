@@ -128,7 +128,7 @@ int main(int argc, char** argv) {
     constexpr std::array<motionfield::Mode, 4> modes{motionfield::Mode::classic,
         motionfield::Mode::throughZero, motionfield::Mode::transient, motionfield::Mode::field};
     constexpr std::array<const char*, 4> filenames{"01_classic.wav", "02_through_zero.wav",
-                                                   "03_transient_split.wav", "04_motion_field.wav"};
+                                                   "03_transient_split.wav", "04_field_matrix.wav"};
     for (std::size_t i = 0; i < modes.size(); ++i)
         writeWav(outputDirectory / filenames[i], render(source, sampleRate, modes[i]), sampleRate);
 

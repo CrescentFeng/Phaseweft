@@ -1,4 +1,4 @@
-# Factory preset catalog — v0.2
+# Factory preset catalog — v0.7
 
 The initial bank is deliberately small enough to audit. It covers distinct jobs instead of minor parameter variations.
 
@@ -35,4 +35,4 @@ The initial bank is deliberately small enough to audit. It covers distinct jobs 
 - **Feedback Bloom** — slow coloured through-zero feedback.
 - **Broken Compass** — fast asymmetric transient motion.
 
-Six representative renders are stored under `artifacts/audio/featured-presets/`. These are design-review material, not mastered marketing demos.
+Six representative renders are stored under `artifacts/audio/featured-presets/`. They use the same procedural source as the four engine comparisons and are intended for direct design evaluation, not as mastered marketing material. See [DEMO_AUDIO.md](DEMO_AUDIO.md) for the listening order and exact provenance.

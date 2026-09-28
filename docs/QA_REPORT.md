@@ -97,7 +97,7 @@ The complete sanitized evidence and finding dispositions are in `docs/G3_REPORT.
 
 ## Not yet GitHub-release-qualified
 
-- G4 screenshots, installation/troubleshooting guidance and final demonstration review remain open.
+- The G4 source-built interface screenshot remains open. Installation, troubleshooting, architecture and demonstration documentation are complete.
 - G5 feature-freeze regression, archive inspection, checksum, tag and independent rebuild remain open.
 - Windows DAW and Intel-host execution have not been observed and must not be claimed.
 - A forced full-system sleep/wake cycle was not run; audio-graph restarts and live rate changes passed.

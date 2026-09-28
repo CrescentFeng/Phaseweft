@@ -43,10 +43,10 @@ No tag or GitHub release should be described as complete until every required it
 - [x] G0 audit and GitHub roadmap are present.
 - [x] Build commands pass when copied from the README.
 - [ ] Current GUI screenshots added.
-- [ ] Demo audio reviewed and linked.
-- [ ] Installation and troubleshooting instructions complete.
-- [ ] All documentation links checked.
-- [ ] No commercial-release, signing or platform claim exceeds the evidence.
+- [x] Demo audio reviewed and linked.
+- [x] Installation and troubleshooting instructions complete.
+- [ ] All documentation links checked after the final screenshot is added.
+- [x] No commercial-release, signing or platform claim exceeds the evidence.
 
 ## Release operation
 
