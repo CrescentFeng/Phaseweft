@@ -2,7 +2,7 @@
 
 Phaseweft is a JUCE audio-effect project that explores content-aware flanging. Alongside conventional and through-zero flanging, it can separate transient and sustain motion or distribute related delay trajectories across three reconstructing frequency bands.
 
-> **Project status:** complete private GitHub portfolio release, currently v0.7.0. G0–G5 are complete: the source release is published, checksum-verified, independently rebuilt, and backed by the recorded REAPER VST3/AU host-validation evidence.
+> **Project status:** completed source portfolio release, currently v0.7.0. G0–G5 are complete: the source release is published, checksum-verified, independently rebuilt, and backed by the recorded REAPER VST3/AU host-validation evidence.
 
 Phaseweft is presented as an engineering and audio-DSP project, not as a commercially released product. The project name and provisional manufacturer metadata have not received formal trademark clearance. No signed or notarized installer is currently supplied.
 
@@ -154,10 +154,27 @@ The current limitations are tracked in [KNOWN_ISSUES.md](release/KNOWN_ISSUES.md
 
 ## Licence
 
-Phaseweft is currently private, all-rights-reserved source code. Repository access does not grant permission to copy, redistribute, publish or create derivative works beyond uses explicitly authorized by the owner. See [LICENSE](LICENSE).
+Phaseweft-authored material remains all rights reserved; see [LICENSE](LICENSE).
+Publication does not select an AGPL licence for Phaseweft or grant general build,
+modification, redistribution or commercial rights. Build instructions describe
+the technical process for authorized use, not an additional licence grant.
 
-JUCE 9.0.2 remains subject to its own AGPL-3.0-only or commercial JUCE licence options; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The Phaseweft licence may be changed manually by the owner before a future public release.
+JUCE 9.0.2 has its own AGPL-3.0-only or commercial licensing options. An
+all-rights-reserved notice cannot override JUCE's terms. Before distributing a
+JUCE-linked product, establish a compatible licensing path for both Phaseweft
+and JUCE; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and
+[licensing decision](docs/LICENSE_DECISION.md).
 
 ## Project completion definition
 
 Phaseweft is complete for this roadmap when a clean clone can obtain its dependencies, build the documented targets, pass automated tests, pass the recorded REAPER VST3/AU workflow, and provide accurate documentation plus a verifiable GitHub release. Commercial trademark clearance, paid distribution, code signing, notarization and installers are explicitly outside this completion definition.
+
+## Copyright and permitted use / 版权与使用边界
+
+Copyright (c) 2026 Crescent Feng (CrescentFeng). Original material is **all rights reserved**; public visibility is **not an open-source licence**. Viewing/forking rights under GitHub's Terms of Service and rights under applicable law remain unaffected. Attribution alone does not authorize commercial use, redistribution or derivative products. Third-party licences remain applicable.
+
+- [Licence and exact permissions](LICENSE)
+- [Ownership, attribution and permission requests / 署名与授权](COPYRIGHT.md)
+- [Third-party notices](THIRD_PARTY_NOTICES.md)
+- [Citation metadata](CITATION.cff)
+- [Contribution rules](CONTRIBUTING.md) and [security reporting](SECURITY.md)

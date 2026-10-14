@@ -1,14 +1,14 @@
-Copyright (c) 2026. All rights reserved.
+Copyright (c) 2026 Crescent Feng (CrescentFeng). All rights reserved.
 
-Phaseweft is privately distributed source code and accompanying project
-material. No permission is granted to copy, modify, publish, distribute,
+Phaseweft source code and accompanying original project material are
+made available for portfolio inspection with all rights reserved. No permission is granted to copy, modify, publish, distribute,
 sublicense, sell, or create derivative works from this repository or any
 portion of it, except with the prior written permission of the copyright
 holder.
 
-Access to a private repository does not grant a licence beyond viewing and
-using the material for purposes explicitly authorised by the repository
-owner.
+Access to this repository does not grant a licence beyond viewing and
+uses explicitly authorised by the copyright holder, subject to the
+public-repository clarification below.
 
 Third-party components remain subject to their own licence terms. In
 particular, JUCE is not included in this repository and must be used under a
@@ -17,3 +17,21 @@ valid JUCE licensing option.
 THE MATERIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
 FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+Public-repository clarification (2026-10-14)
+-------------------------------------------
+Public visibility is not an open-source licence or a waiver of copyright.
+Nothing in this notice limits rights granted by applicable law, GitHub's
+Terms of Service (including viewing and forking through GitHub's permitted
+functionality), or a separate valid licence. Previously granted rights are
+not retroactively revoked. Third-party licences govern their own material.
+
+Except for those rights and the express permissions above, no permission is
+granted to redistribute original material, incorporate it into another
+product, exploit it commercially, or create and distribute derivative works.
+Attribution alone is not permission. No patent or trademark licence is granted.
+Do not misrepresent authorship or imply the author's endorsement.
+
+Permission requests: https://github.com/CrescentFeng
+Identify the files, intended use, distribution, modifications, and commercial
+context. Permission must be obtained in writing; silence is not consent.

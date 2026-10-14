@@ -30,3 +30,18 @@ Once contributions open, changes will be expected to:
 ## Scope
 
 Commercial branding, copy protection, pricing and installer work are outside the current G0–G5 roadmap.
+
+## Ownership and contribution terms
+
+Issue reports and suggestions are welcome. Propose substantive code or asset
+contributions only after the maintainer agrees on the scope and written terms.
+Do not assume that a pull request transfers copyright. Contributors retain
+ownership unless separately agreed; any permission to integrate, distribute,
+or relicense their work must be explicit before it is merged. No automatic
+copyright assignment or blanket contributor licence is imposed here.
+
+Only submit material you are entitled to contribute. Identify third-party
+sources, licences and modifications; retain notices. Do not include private
+recordings, credentials, personal data or assets with unresolved rights.
+The repository LICENSE, applicable law and GitHub Terms of Service continue
+to apply. Public visibility alone does not authorize general reuse.

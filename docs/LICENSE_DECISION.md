@@ -1,34 +1,41 @@
 # Source licence decision
 
-Status: **selected for the private repository**
+Updated: 2026-10-14
 
-## Current choice: private, all rights reserved
+## Owner's publication intent
 
-The owner selected a private GitHub repository for the current development stage. The Phaseweft-authored source and project-generated assets therefore remain all rights reserved under the repository `LICENSE`.
+The owner requested public GitHub visibility while retaining development and
+creative rights. The original Phaseweft material therefore remains **all rights
+reserved** under [LICENSE](../LICENSE); this documentation does not grant MIT,
+Apache, AGPL or Creative Commons permissions for Phaseweft. GitHub platform
+rights and applicable statutory rights remain unaffected.
 
-Repository access does not grant general permission to copy, redistribute, publish or create derivative works. The owner may manually replace these terms before a later public release.
+## JUCE licensing must be established separately
 
-## Future public-release recommendation: AGPL-3.0-only
+JUCE 9.0.2 declares `AGPL-3.0-only OR LicenseRef-JUCE-Commercial`. Public source
+visibility does not by itself satisfy AGPL obligations. The proprietary route
+requires an applicable JUCE commercial licence, potentially Starter if its
+eligibility and all other terms are met. The repository does not contain proof
+of the author's JUCE entitlement, so this document does not certify it.
 
-JUCE 9.0.2 declares its framework modules as `AGPL-3.0-only OR LicenseRef-JUCE-Commercial`. For a public, source-buildable portfolio project that does not currently require closed-source binary distribution, AGPL-3.0-only is the clearest matching open-source path.
+If the author instead chooses the AGPL route for the combined work, the
+Phaseweft terms must be made compatible through an explicit licensing decision;
+that change would grant reuse rights and cannot be represented as a ban on
+commercial use. No such relicensing is performed by this update.
 
-Under this choice:
+Before publishing a JUCE-linked source product or distributing binaries,
+confirm the author's licence and the scope of any copied/derived JUCE code.
+Third-party rights cannot be overridden by the Phaseweft notice. Preserve
+licence evidence privately; do not commit purchase/account information.
 
-- Phaseweft source and redistributed modified versions remain available under AGPL-3.0-only.
-- A user building the JUCE-linked targets can use JUCE's AGPL option, subject to the complete AGPL terms.
-- Public network or redistribution obligations must be evaluated from the actual use and licence text.
-- The project owner can still pursue a separate future commercial version of code for which the owner retains the necessary copyrights.
-- Accepting outside code contributions later may complicate relicensing unless contribution terms are defined first.
+## Contributions and release history
 
-## Current private alternative
+Agree written contribution terms before accepting outside code; contributors'
+copyright is not automatically assigned. Earlier releases retain their own
+notices and any already granted rights are not retroactively revoked. The
+v0.7.0 archive is a historical source snapshot, not a signed binary installer.
 
-The repository may be publicly visible without granting an open-source licence. Visitors could inspect it, but would not receive general permission to copy, redistribute or modify it. Each builder would also need their own valid JUCE licensing path.
-
-This meets “publicly viewable” but is weaker for a collaborative or reproducible GitHub project and is not the recommended portfolio choice.
-
-This choice was applied only after the owner explicitly requested a private release. It does not select a JUCE commercial licence or alter JUCE's own terms.
-
-Primary references:
+References:
 
 - https://github.com/juce-framework/JUCE/blob/9.0.2/LICENSE.md
 - https://juce.com/legal/juce-9-licence/

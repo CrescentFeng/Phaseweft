@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this project when discussing it. Citation does not grant reuse permission; see LICENSE."
+type: software
+title: "Phaseweft"
+authors:
+  - family-names: "Feng"
+    given-names: "Crescent"
+repository-code: "https://github.com/CrescentFeng/Phaseweft"
+url: "https://github.com/CrescentFeng/Phaseweft"
+license-url: "https://github.com/CrescentFeng/Phaseweft/blob/main/LICENSE"
