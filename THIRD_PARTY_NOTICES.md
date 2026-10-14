@@ -26,8 +26,9 @@ This notice summarizes dependency provenance; it is not legal advice and does no
 
 ## Public inspection boundary (2026-10-14)
 
-The publication request does not itself establish which JUCE licence the author
-holds. JUCE's AGPL option does not permit additional proprietary restrictions
+On 2026-10-14, the owner confirmed an eligible JUCE Starter / Indie / Pro
+commercial licensing path. This records the owner's declaration, not an
+independent verification of private entitlement records. JUCE's AGPL option does not permit additional proprietary restrictions
 on a combined work where the AGPL requires corresponding rights. A proprietary
 publication/distribution path must satisfy the applicable JUCE commercial EULA
 (including Starter eligibility where applicable). Merely omitting JUCE files

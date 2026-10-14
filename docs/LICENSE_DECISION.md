@@ -15,16 +15,19 @@ rights and applicable statutory rights remain unaffected.
 JUCE 9.0.2 declares `AGPL-3.0-only OR LicenseRef-JUCE-Commercial`. Public source
 visibility does not by itself satisfy AGPL obligations. The proprietary route
 requires an applicable JUCE commercial licence, potentially Starter if its
-eligibility and all other terms are met. The repository does not contain proof
-of the author's JUCE entitlement, so this document does not certify it.
+eligibility and all other terms are met. On 2026-10-14, the owner confirmed use of an eligible JUCE Starter / Indie / Pro
+commercial licensing path. This is the owner's declaration; the specific tier
+and private entitlement documents are not published or independently verified
+here. On that basis, the source portfolio is published with original
+Phaseweft material remaining all rights reserved.
 
 If the author instead chooses the AGPL route for the combined work, the
 Phaseweft terms must be made compatible through an explicit licensing decision;
 that change would grant reuse rights and cannot be represented as a ban on
 commercial use. No such relicensing is performed by this update.
 
-Before publishing a JUCE-linked source product or distributing binaries,
-confirm the author's licence and the scope of any copied/derived JUCE code.
+Before future JUCE-linked releases or binary distribution, maintain eligibility
+and confirm the applicable licence and the scope of any copied/derived JUCE code.
 Third-party rights cannot be overridden by the Phaseweft notice. Preserve
 licence evidence privately; do not commit purchase/account information.
 
